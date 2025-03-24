@@ -33,3 +33,12 @@ entry hijacking:
 
 random:
 ->  objdump -M intel -dj .plt.sec plt_mod | grep puts -A 2
+
+labvm stuff:
+-> start_vm comp3703
+-> ssh -p 5555 user1@localhost
+-> stop_vm comp3703
+
+-> sftp -P 5555 user1@localhost
+-> sftp> get myfile.txt  # retrieve file from VM
+-> sftp> put myfile.txt # put file into VM
