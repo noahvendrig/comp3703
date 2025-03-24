@@ -1,0 +1,35 @@
+run gdb with param:
+-> gdb --args program "param"
+OR
+-> r "param"
+
+convert hex to ascii:
+-> echo -n "hex stuff" | xxd -r -p
+
+decode b64 string:
+-> echo b64 string| base64 -d
+
+-> cat file.txt| base64 -d
+
+-> base64 -d b64_file > output
+
+nb4 to gzip:
+-> cat file.txt | base64 -d > payload.gz
+
+unzip
+-> cat file.txt| base64 -d | gunzip
+-> gunzip file.gz
+
+
+elfins:
+-> nasm -f bin -o plt.bin plt.s
+-> python3 ./elfins.py got_mod got.bin -o hijack_got --patchgot printf
+-> python3 ./elfins.py plt_mod plt.bin -o hijack_plt --patchaddress 0x1110 # 0x1110 is location of e.g. puts@plt shown by .plt.sec
+-> python3 elfins.py re_entry entry_q2.bin -o hijack_entry --patchentry
+
+
+entry hijacking:
+-> The `.text` section starts at address `0x55e0a0` in virtual memory and at offset `0x10a0` in the file. Hence the address `0x55ea45` (where our jump instr of interest is located), is at offset `(0x55ea45 - 0x55e0a0 + 0x10a0) = 0x1A45` in the file. 
+
+random:
+->  objdump -M intel -dj .plt.sec plt_mod | grep puts -A 2
