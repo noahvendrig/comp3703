@@ -1,0 +1,15 @@
+--2025-03-02 13:33:48--  https://gitlab.cecs.anu.edu.au/comp3703/2025/labs/lab02/-/raw/main/ctf/oracle?ref_type=heads
+Resolving gitlab.cecs.anu.edu.au (gitlab.cecs.anu.edu.au)... 150.203.161.182, 150.203.161.180, 150.203.161.183
+Connecting to gitlab.cecs.anu.edu.au (gitlab.cecs.anu.edu.au)|150.203.161.182|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://gitlab.cecs.anu.edu.au/users/sign_in [following]
+--2025-03-02 13:33:48--  https://gitlab.cecs.anu.edu.au/users/sign_in
+Reusing existing connection to gitlab.cecs.anu.edu.au:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 15835 (15K) [text/html]
+Saving to: ‘oracle?ref_type=heads’
+
+oracle?ref_type=heads                                                    0%[                                                                                                                                                                           ]       0  --.-KB/s               oracle?ref_type=heads                                                  100%[==========================================================================================================================================================================>]  15.46K  --.-KB/s    in 0.001s  
+
+2025-03-02 13:33:49 (19.9 MB/s) - ‘oracle?ref_type=heads’ saved [15835/15835]
+
